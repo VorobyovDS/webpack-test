@@ -1,0 +1,11 @@
+.footer {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  &__men-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+  }
+}
