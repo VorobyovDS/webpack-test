@@ -7,7 +7,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack --watch --mode production",
-    "start2": "webpack-dev-server --content-base src --hot --inline --mode production"
+    "start2": "webpack-dev-server --inline --mode production"
   },
   "author": "",
   "license": "ISC",

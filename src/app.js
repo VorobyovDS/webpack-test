@@ -1,7 +1,7 @@
-import './common.scss';
+require('./common.scss');
 // import './index.html'
-import './index.html';
-import './block/test.js';
+require('./index.html');
+require('./block/test.js');
 
 /*let name ="john", age =25;
 let s =`Hello ${name}.${age+1}`;

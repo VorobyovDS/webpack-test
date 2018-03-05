@@ -14,9 +14,8 @@ module.exports = {
     entry: PATHS.source +'/app.js',
     //entry: ['webpack-dev-server/client?localhost:3000', './src/app.js'],
     devServer: {
-        contentBase: PATHS.build,
-        compress: true,
-        index: 'index.htm',
+        // contentBase: PATHS.build,
+        // compress: true,
         open: true,
         watchContentBase: true
     },
