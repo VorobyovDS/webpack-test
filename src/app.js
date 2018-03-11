@@ -3,6 +3,26 @@ require('./common.scss');
 require('./index.html');
 require('./block/test.js');
 
+import React from 'react';
+import {render} from 'react-dom';
+import Greeter from './block/Greeter'
+//import { CometSpinLoader } from 'react-css-loaders';
+
+
+// <CometSpinLoader color="#C5FF52" duration="10" size="200"/>,
+
+
+render(
+    <Greeter />,
+    document.getElementById('root')
+);
+
+
+
+
+
+
+
 /*let name ="john", age =25;
 let s =`Hello ${name}.${age+1}`;
 console.log(s);*/

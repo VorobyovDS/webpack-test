@@ -4,10 +4,45 @@
 body {
   position: relative;
   background: url("img/dotally.png");
-  
+  .welcome {
+    font-family: 'Permanent Marker', sans-serif;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .button {
+    margin: 0 auto;
+    font-family: 'Permanent Marker', sans-serif;
+    font-style: italic;
+    font-size: 17px;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    //text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    display: block;
+    background: linear-gradient(to top, rgba(76,213,26,0.39), transparent);
+    border-radius: 20px;
+    border: none;
+    //text-shadow:1px 1px 0 rgb(68,157,165),2px 2px 0 rgb(51,118,124),3px 3px 0 rgb(34,78,82),4px 4px 0 rgb(17,39,41),5px 5px 1px rgba(0,0,0,0.26);
+    box-shadow:3px 1px 13px 14px rgba(76,213,26,0.39);
+    transition: 1s;
+    &:hover {
+      transition: 1s;
+      background: linear-gradient(to top, rgba(76, 213, 26, 0.65), transparent);
+      box-shadow:3px 1px 32px 14px rgba(205,225,198,0.39);
+    }
+    &:active,&:focus {
+      outline: none;
+    }
+  }
 
   .title {
-    color: rgb(250, 79, 55);
+    color: rgb(69, 250, 110);
     font-family: 'Permanent Marker', cursive;
     font-size: 40px;
     display: inline-block;
@@ -31,4 +66,5 @@ body {
     font-size: 30px;
     }
   }
+
 }

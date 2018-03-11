@@ -14,7 +14,7 @@ module.exports = {
     entry: PATHS.source +'/app.js',
     //entry: ['webpack-dev-server/client?localhost:3000', './src/app.js'],
     devServer: {
-        // contentBase: PATHS.build,
+        contentBase: PATHS.build,
         // compress: true,
         open: true,
         watchContentBase: true
@@ -33,7 +33,7 @@ module.exports = {
                     fallback: 'style-loader',
                     use: [
                         {
-                            loader: 'css-loader', options: { /*importLoaders: 1,*/ minimize:true}
+                            loader: 'css-loader', options: { /*importLoaders: 1,*//* minimize:true*/}
                         },
                         {
                             loader: 'postcss-loader',
@@ -54,7 +54,10 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015','react']
+                }
             },
             {
                 test: /\.(jpg|png|svg|gif)$/,
@@ -101,11 +104,23 @@ module.exports = {
                     loader: 'html-loader',
                     options: {
                        // attrs: [':data-src']
-                        minimize: true
+                       //  minimize: true
 
                     }
                 }
 
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
+            },
+            {
+                test: [
+                    /component\.jsx$/, // select component by RegExp
+                    /\.async\.jsx$/, // select component by extension
+                    "/abs/path/to/component.jsx" // absolute path to component
+                ],
+                loader: "react-proxy-loader"
             }
             // {
             //

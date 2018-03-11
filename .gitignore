@@ -2,6 +2,7 @@
 /*.sublime-project
 /*.sublime-workspace
 /*.editorconfig
+/package-lock.json
 thumbs.db
 
 /node_modules/
